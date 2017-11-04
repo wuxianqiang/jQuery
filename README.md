@@ -60,3 +60,13 @@ jQuery的map()方法和 `Array.prototype.map()` 方法很相近。它接受回�
 |方法名称|含义|一个字符串作为参数|一个字符串和一个函数作为参数|
 |-|-|-|-|
 |toggleClass()|添加或移除CSS类名（多个用空格分开）|添加或移除|回调函数返回true时表示设置，返回false表示移除|
+
+## 归纳
+
+* 获取和设置HTML属性（attr()/removeAttr）
+* 获取和设置CSS属性（css()）
+* 获取和设置CSS类名（addClass()/removeClass()/toggleClass()）
+* 获取和设置HTML表单值（val()）
+* 获取和设置元素内容（text()/html()）
+* 获取和设置元素的位置高宽（offset()）
+* 获取和设置元素数据（data()）
