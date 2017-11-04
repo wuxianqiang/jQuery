@@ -25,7 +25,7 @@ jQuery类库定义了一个全局函数：`jQuery()`。该函数使用频繁，�
 
 通过第三种方式调用时，`$()` 接受可选的第二参数。可以传递Document对象来指定与所创建元素相关联的文档。（比如，当创建的元素需要插入iframe里时，需要显式指定该iframe的document对象。）第二参数还可以是object对象。此时，假设该对象的属性表示HTML属性的键/值对，这些属性将设置到所创建的对象上。当第二参数对象的属性名是"css"、"html"、"text"、"width"、"height"、"offset"、"val"或"data"，或者属性名是jQuery事件处理程序注册方法名时，jQuery将调用新创建元素上的同名方法，并传入属性值。
 ```js
-var img=$("＜img/＞",//新建一个＜img＞元素
+var img=$(  "<img/>",//新建一个＜img＞元素
             {src:url,//具有HTML属性
  css:{borderWidth:5},//CSS样式
     click:handleClick//和事件处理程序
