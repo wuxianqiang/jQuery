@@ -13,9 +13,11 @@ jQuery类库定义了一个全局函数：`jQuery()`。该函数使用频繁，�
 
 `jQuery()` 是工厂函数，不是构造函数，它返回一个新创建的对象，但并没有和new关键字一起使用。
 
-“jQuery函数”: jQuery函数指定义在jQuery命名空间中的函数，比如 `$.each(a,fn);` 。jQuery函数也可称为“静态方法”。
+“jQuery函数”：jQuery函数指定义在jQuery命名空间中的函数，比如 `$.each(a,fn);` 。jQuery函数也可称为“静态方法”。
 
-“jQuery方法”: jQuery方法是由jQuery函数返回的jQuery对象的方法，比如 `$("a").each(fn);`。jQuery类库最重要的部分就是它定义的这些强大的方法。
+“jQuery方法”：jQuery方法是由jQuery函数返回的jQuery对象的方法，比如 `$("a").each(fn);`。jQuery类库最重要的部分就是它定义的这些强大的方法。
+
+`$()` 的返回值是一个jQuery对象。jQuery对象是类数组。jQuery对象还有三个挺有趣的属性。`selector` 属性是创建jQuery对象时的选择器字符串（如果有的话）。`context` 属性是上下文对象，是传递给 `$()` 方法的第二参数，如果没有传递的话，默认是Document对象。最后，所有jQuery对象都有一个名为jquery的属性，检测该属性是否存在可以简单快捷地将jQuery对象与其他类数组对象区分开来。
 
 ## jQuery()函数
 
