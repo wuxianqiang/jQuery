@@ -71,6 +71,15 @@ jQuery的map()方法和 `Array.prototype.map()` 方法很相近。它接受回�
 * 获取和设置元素数据（data()/removeData()）
 * 复制元素（clone()）
 
+|方法名称|方法作用|是否包含padding|是否包含border|
+|-|-|-|-|
+|width()|获取和设置元素的宽|否|否|
+|height()|获取和设置元素的高|否|否|
+|innerWidth()|获取和设置元素的宽|是:white_check_mark:|否|
+|innerHeight()|获取和设置元素的高|是:white_check_mark:|否|
+|outerWidth()|获取和设置元素的宽|是:white_check_mark:|是:white_check_mark:|
+|outerHeight()|获取和设置元素的高|是:white_check_mark:|是:white_check_mark:|
+
 ## 修改和替换元素
 
 |操作|$(target).method(content)|函数参数|$(content).method(target)|函数参数|
