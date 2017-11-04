@@ -73,7 +73,7 @@ jQuery的map()方法和 `Array.prototype.map()` 方法很相近。它接受回�
 |-|-|-|-|-|
 |在目标元素的结尾处插入内容|append()|能|appendTo()|否|
 |在目标元素的起始处插入内容|prepend()|能|prependTo()|否|
-|在目标元素的后面处插入内容|after()|能|insertAfter()|否|
-|在目标元素的前面处插入内容|before()|能|insertBefore()|否|
+|在目标元素的后面处插入内容|after()|能(该函数在调用时没有第二参数)|insertAfter()|否|
+|在目标元素的前面处插入内容|before()|能(该函数在调用时没有第二参数)|insertBefore()|否|
 |在目标元素替换为指定的内容|replaceWith()|能|relpaceAll()|否|
 
