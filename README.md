@@ -69,6 +69,7 @@ jQuery的map()方法和 `Array.prototype.map()` 方法很相近。它接受回�
 * 获取和设置元素内容（text()/html()）
 * 获取和设置元素的位置高宽（offset()/position()/width()/height()/innerWidth()/innerHeight()/outerWidth()/outerHeight()）offset()返回元素的绝对位置，用相对于文档的坐标来表示。而position()则返回相对于元素的offsetParent()的偏移量。width()和height()方法返回基本的宽度和高度，不包含内边距、边框和外边距。innerWidth()和innerHeight()返回元素的宽度和高度，包含内边距的宽度和高度（“内”表示这些方法度量的是边框以内的尺寸）。outerWidth()和outerHeight()通常返回的是包含元素内边距和边框的尺寸。
 * 获取和设置元素数据（data()/removeData()）
+* 复制元素（clone()）
 
 ## 修改和替换元素
 
