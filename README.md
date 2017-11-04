@@ -89,5 +89,7 @@ jQuery的map()方法和 `Array.prototype.map()` 方法很相近。它接受回�
 
 ```js
 //用＜i＞元素包装所有＜h1＞元素
-$("h1").wrap(document.createElement("i"));//产生＜i＞＜h1＞...＜/h1＞＜/i＞//包装所有＜h1＞元素的内容，使用字符串参数更简单
+$("h1").wrap(document.createElement("i"));
+//产生＜i＞＜h1＞...＜/h1＞＜/i＞
+//包装所有＜h1＞元素的内容，使用字符串参数更简单
 ```
