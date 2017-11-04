@@ -112,3 +112,12 @@ $("h1").wrapInner("<i/>");
 |remove()|删除选中元素|是:white_check_mark:|是:white_check_mark:|
 |detach()|删除选中元素|是:white_check_mark:|否|
 |unwrap()|删除选中元素的父元素|否|是:white_check_mark:|
+
+## 事件
+
+* focus和blur事件不支持冒泡，但focusin和focusout事件支持。
+* mouseover和mouseout事件支持冒泡，mouseenter和mouseleave是非冒泡事件。
+* resize和unload事件类型只在Window对象中触发。
+* scroll()方法经常也用于$(window)对象上，但它也可以用在有滚动条的任何元素上（比如，当CSS的overflow属性设置为"scroll"或"auto"时）。
+* hover()方法用来给mouseenter和mouseleave事件注册处理程序。调用hover(f,g)就和调用mouseenter(f)然后调用mouseleave(g)一样。如果仅传入一个参数给 hover()，该参数函数会同时用做enter和leave事件的处理程序。
+* 另一个特殊的事件注册方法是toggle()。该方法将事件处理程序函数绑定到单击事件。可指定两个或多个处理程序函数，当单击事件发生时，jQuery每次会调用一个处理程序函数。
