@@ -163,8 +163,8 @@ jQuery动画是异步的。调用 `fadeIn()` 等动画方法时，它会立刻�
 
 ## 简单动画
 
-|方法名|方法名|方法名|
-|-|-|-|
-|fadeIn()|fadeOut()|fadeTo()|
-|show()|hide()|toggle()|
-|slideDown()|slideUp()|slideToggle()|
+|方法名|方法名|方法名|实现原理|是否占位|
+|-|-|-|-|-|
+|fadeIn()|fadeOut()|fadeTo()|改变透明度|是|
+|show()|hide()|toggle()|改变透明度后display:none|否|
+|slideDown()|slideUp()|slideToggle()|改变高度实后display:none|否|
