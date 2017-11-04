@@ -177,10 +177,11 @@ jQuery动画是异步的。调用 `fadeIn()` 等动画方法时，它会立刻�
 
 ## jQuery中的Ajax
 
-`load()` 是所有jQuery工具中最简单的：向它传入一个URL，它会异步加载该URL的内容，然后将内容插入每一个选中元素中，替换掉已经存在的任何内容。
 
 `jQuery.getScript()` 函数的第一个参数是JavaScript代码文件的URL。它会异步加载文件，加载完成后在全局作用域执行该代码。它能同时适用于同源和跨源脚本。
 
-`jQuery.getJSON()` 与jQuery.getScript类似：它会获取文本，然后特殊处理一下，再调用指定的回调函数。`jQuery.getJSON()` 获取到文本后，不会将其当做脚本执行，而会将其解析为JSON。`jQuery.getJSON()` 只有在传入了回调参数时才有用。当成功加载URL，以及将内容成功解析为JSON后，解析结果会作为第一个参数传入回调函数中。
+`jQuery.getJSON()` 与 `jQuery.getScript` 类似：它会获取文本，然后特殊处理一下，再调用指定的回调函数。`jQuery.getJSON()` 获取到文本后，不会将其当做脚本执行，而会将其解析为JSON。`jQuery.getJSON()` 只有在传入了回调参数时才有用。当成功加载URL，以及将内容成功解析为JSON后，解析结果会作为第一个参数传入回调函数中。
 
 `jQuery.get()` 使用HTTP GET请求来实现，`jQuery.post()` 使用HTTP POST请求，其他两者则都是一样的。
+
+上面四个Ajax工具最后都会调用 `jQuery.ajax()`——这是整个类库中最复杂的函数。`jQuery.ajax()` 仅接受一个参数：一个选项对象，该对象的属性指定Ajax请求如何执行的很多细节。
