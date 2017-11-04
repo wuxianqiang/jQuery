@@ -185,3 +185,10 @@ jQuery动画是异步的。调用 `fadeIn()` 等动画方法时，它会立刻�
 `jQuery.get()` 使用HTTP GET请求来实现，`jQuery.post()` 使用HTTP POST请求，其他两者则都是一样的。
 
 上面四个Ajax工具最后都会调用 `jQuery.ajax()`——这是整个类库中最复杂的函数。`jQuery.ajax()` 仅接受一个参数：一个选项对象，该对象的属性指定Ajax请求如何执行的很多细节。
+
+## 推荐阅读
+
+* [工具函数](http://jquery.cuishifeng.cn/jQuery.Ajax.html)
+* [jQuery选择器](http://jquery.cuishifeng.cn/jQuery.Ajax.html)
+
+
