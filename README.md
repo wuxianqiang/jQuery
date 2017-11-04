@@ -13,6 +13,10 @@ jQuery类库定义了一个全局函数：`jQuery()`。该函数使用频繁，�
 
 `jQuery()` 是工厂函数，不是构造函数，它返回一个新创建的对象，但并没有和new关键字一起使用。
 
+“jQuery函数”: jQuery函数指定义在jQuery命名空间中的函数，比如 `$.each(a,fn);` 。jQuery函数也可称为“静态方法”。
+
+“jQuery方法”: jQuery方法是由jQuery函数返回的jQuery对象的方法，比如 `$("a").each(fn);`。jQuery类库最重要的部分就是它定义的这些强大的方法。
+
 ## jQuery()函数
 
 在jQuery类库中，最重要的方法是`jQuery()`方法（也就是 `$()` ）。它的功能很强大，有4种不同的调用方式。
