@@ -191,4 +191,212 @@ jQuery动画是异步的。调用 `fadeIn()` 等动画方法时，它会立刻�
 * [工具函数](http://jquery.cuishifeng.cn/jQuery.Ajax.html)
 * [jQuery选择器](http://jquery.cuishifeng.cn/jQuery.Ajax.html)
 
-
+## 模仿代码
+```js
+let utils = (function () {
+    /**
+     * 元素距离body的偏移量
+     * @param {element} ele 元素
+     * @returns 对象中包含左偏移和上偏移
+     */
+    function offset(ele) {
+        let left, top, par;
+        left = ele.offsetLeft;
+        top = ele.offsetTop;
+        par = ele.offsetParent;
+        while (par) {
+            left += par.offsetLeft;
+            top += par.offsetTop
+            left += par.clientLeft;
+            top += par.clientTop;
+            par = par.offsetParent;
+        }
+        return {
+            left,
+            top
+        };
+    }
+    /**
+     * 元素距离父元素的偏移量
+     * @param {element} ele 元素
+     * @returns 对象中包含左偏移和上偏移
+     */
+    function position(ele) {
+        let left, top;
+        left = ele.offsetLeft;
+        top = ele.offsetTop;
+        return {
+            left,
+            top
+        };
+    }
+    /**
+     * 获取或设置页面的滚动的高度
+     * @param {element} ele 元素
+     * @param {number} val 值
+     * @returns 页面已滚动的高度
+     */
+    function scrollTop(ele, val) {
+        if (val == undefined) {
+            return ele.scrollTop;
+        } else {
+            ele.scrollTop = val;
+        }
+    }
+    /**
+     * 获取或设置页面的滚动的高度
+     * @param {element} ele 元素
+     * @param {number} val 值
+     * @returns 页面已滚动的高度
+     */
+    function scollLeft(ele, val) {
+        if (val == undefined) {
+            return ele.scollLeft;
+        } else {
+            ele.scollLeft = val;
+        }
+    }
+    /**
+     * 获取或设置元素内容的宽度
+     * @param {element} ele 元素
+     * @param {number} val 值
+     * @returns 
+     */
+    function width(ele, val) {
+        if (val == undefined) {
+            return window.getComputedStyle(ele).width;
+        } else {
+            ele.style.width = val;
+        }
+    }
+    /**
+     * 获取或设置元素内容的宽度
+     * @param {element} ele 元素
+     * @param {number} val 值
+     * @returns 
+     */
+    function height(ele, val) {
+        if (val == undefined) {
+            return window.getComputedStyle(ele).height;
+        } else {
+            ele.style.height = val;
+        }
+    }
+    /**
+     * 获取元素内容加补白的高度
+     * @param {element} ele 元素
+     * @returns 
+     */
+    function innerHeight(ele) {
+        return ele.clientHeight;
+    }
+    /**
+     * 获取元素内容加补白的宽度
+     * @param {element} ele 元素
+     * @returns 
+     */
+    function innerWidth(ele) {
+        return ele.clientWidth;
+    }
+    /**
+     * 获取元素内容加补白加边框的高度
+     * @param {element} ele 元素
+     * @returns 
+     */
+    function outerHeight(ele) {
+        return ele.offsetHeight;
+    }
+    /**
+     * 获取元素内容加补白加边框的宽度
+     * @param {element} ele element
+     * @returns 
+     */
+    function outerWidth(ele) {
+        return ele.offsetWidth;
+    }
+    /**
+     * 在容器的末尾添加元素
+     * @param {element} con 容器
+     * @param {element} ele 元素
+     */
+    function append(con, ele) {
+        con.appendChild(ele);
+    }
+    /**
+     * 元素向容器末尾添加
+     * @param {element} ele 元素
+     * @param {element} con 容器
+     */
+    function appendTo(ele, con) {
+        con.appendChild(ele);
+    }
+    /**
+     * 在容器的开头添加元素
+     * @param {element} con 容器
+     * @param {element} ele 元素
+     */
+    function prepend(con, ele) {
+        con.insertBefore(ele, con.firstElementChild)
+    }
+    /**
+     * 元素向容器开头添加
+     * @param {element} ele 元素
+     * @param {element} con 容器
+     */
+    function prependTo(ele, con) {
+        con.insertBefore(ele, con.firstElementChild)
+    }
+    /**
+     * 在旧元素前面添加新元素
+     * @param {element} ele 旧元素
+     * @param {element} ctx 新元素
+     */
+    function after(ele, ctx) {
+        ele.parentNode.insertBefore(ctx, ele.nextElementSibling);
+    }
+    /**
+     * 在旧元素后面添加新元素
+     * @param {element} ele 旧元素
+     * @param {element} ctx 新元素
+     */
+    function before(ele, ctx) {
+        ele.parentNode.insertBefore(ctx, ele);
+    }
+    /**
+     * 新元素添加到旧元素前面
+     * @param {element} ctx 新元素
+     * @param {element} ele 旧元素
+     */
+    function insertAfter(ctx, ele) {
+        ele.parentNode.insertBefore(ctx, ele.nextElementSibling);
+    }
+    /**
+     * 新元素添加到旧元素后面
+     * @param {element} ctx 新元素
+     * @param {element} ele 旧元素
+     */
+    function insertBefore(ctx, ele) {
+        ele.parentNode.insertBefore(ctx, ele.nextElementSibling);
+    }
+    return {
+        offset,
+        position,
+        scrollTop,
+        scollLeft,
+        width,
+        height,
+        innerHeight,
+        innerWidth,
+        outerHeight,
+        outerWidth,
+        append,
+        appendTo,
+        prepend,
+        prependTo,
+        after,
+        before,
+        insertAfter,
+        insertBefore
+    }
+})()
+```
