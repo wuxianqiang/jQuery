@@ -244,8 +244,8 @@ let utils = (function () {
         }
     }
     /**
-     * 获取或设置页面的滚动的高度
-     * @param {element} ele 元素
+     * 获取或设置页面的滚动的宽度
+     * @param {element} ele 元素
      * @param {number} val 值
      * @returns 页面已滚动的高度
      */
@@ -270,8 +270,8 @@ let utils = (function () {
         }
     }
     /**
-     * 获取或设置元素内容的宽度
-     * @param {element} ele 元素
+     * 获取或设置元素内容的高度
+     * @param {element} ele 元素
      * @param {number} val 值
      * @returns 
      */
